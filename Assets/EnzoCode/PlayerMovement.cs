@@ -36,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
         m_turn.x += mousePos.x;
         m_turn.y += mousePos.y;
         if ( !LockRotation() ) {
-            transform.rotation = Quaternion.Euler(-m_turn.y, m_turn.x, 0);
+            float rotationLimitY = Mathf.Clamp(-m_turn.y, -30, 30);
+            transform.rotation = Quaternion.Euler(rotationLimitY, m_turn.x, 0);
         }
 
         Vector3 move = transform.right * input.x + transform.forward * input.y;
