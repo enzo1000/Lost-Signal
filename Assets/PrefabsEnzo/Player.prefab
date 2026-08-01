@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70ecc40640ef544892cdb286f02aac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  m_itemToHold: {fileID: 952042820766931690, guid: bc5ff4eb9db8621498ff004a618535fd, type: 3}
+  m_itemToHold: {fileID: 8459286451192642403, guid: 9151239346566b8479429fbfcb2e3ccf, type: 3}
   m_holder: {fileID: 291834158998587931}
 --- !u!1 &7667071699612672806
 GameObject:
