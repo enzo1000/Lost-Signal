@@ -7,13 +7,12 @@ public class HeldItemManager : MonoBehaviour
 
     private GameObject m_instantiatedGameObject;
 
+    //================================================================================================================================
+    //================================================================================================================================
     private void Start() {
         m_instantiatedGameObject = Instantiate(m_itemToHold);
-        m_instantiatedGameObject.transform.parent = transform.parent;
-        m_holder.GetComponent<MeshRenderer>().enabled = false;
-    }
-
-    private void Update() {
-        m_instantiatedGameObject.transform.localPosition = m_holder.transform.position;
+        m_instantiatedGameObject.transform.parent = m_holder.transform;     // Reparenting
+        m_instantiatedGameObject.transform.localPosition = Vector3.zero;    // Init current position
+        m_holder.GetComponent<MeshRenderer>().enabled = false;              // Hide holder
     }
 }
