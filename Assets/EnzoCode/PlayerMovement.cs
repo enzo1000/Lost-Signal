@@ -55,6 +55,6 @@ public class PlayerMovement : MonoBehaviour
     //================================================================================================================================
     //================================================================================================================================
     private bool LockRotation() {
-        return GetComponent<PhoneManager>().GetRotationLock();
+        return GetComponent<PhoneManager>().GetRotationLock() || GetComponent<jeu_allumette>().GetJOUEAllumettes();
     }
 }
