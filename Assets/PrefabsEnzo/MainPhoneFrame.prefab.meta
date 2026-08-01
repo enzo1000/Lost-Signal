@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/PrefabsEnzo/MainPhoneFrame.prefab.meta
 guid: fd47119c4b84d0d4895d6497888561bc
+========
+guid: 9151239346566b8479429fbfcb2e3ccf
+>>>>>>>> 90f9563 (re submit naoki phone prefab):Assets/PrefabsEnzo/smartphone 1.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
