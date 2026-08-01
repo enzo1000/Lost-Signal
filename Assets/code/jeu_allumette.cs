@@ -3,11 +3,13 @@ using UnityEngine.InputSystem;
 
 public class jeu_allumette : MonoBehaviour
 {
+    public GameObject Phone;
     private bool isPlayerInZone = false;
+    private bool JOUE = false;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Player")
+        if (other.name == "cube_cheminee")
         {
             isPlayerInZone = true;
             Debug.Log("Appuie sur E CHIENNNNNNN" + other.name);
@@ -17,7 +19,7 @@ public class jeu_allumette : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.name == "Player")
+        if (other.name == "cube_cheminee")
         {
             isPlayerInZone = false;
             Debug.Log("TIE PARTIT SALE CHIEN !");
@@ -34,10 +36,18 @@ public class jeu_allumette : MonoBehaviour
         }
     }
 
+    public bool GetJOUEAllumettes()
+    {
+        return JOUE;
+    }
+
     void IlAApuiyercecon()
     {
-        Debug.Log("bravo ta appuie t trop fort bebou <3");
-        
+        Debug.Log("bravo ta appuie t trop fort bebou <3 MTN JOUE CHIEN");
+        Phone.gameObject.SetActive(false);
+        JOUE = true;
+        Debug.Log("JOUE = " + JOUE);
+
 
     }
 }
