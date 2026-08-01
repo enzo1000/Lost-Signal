@@ -14,9 +14,6 @@ public class PlayerMovement : MonoBehaviour
     //================================================================================================================================
     //================================================================================================================================
     void Start() {
-        // Hide cursor
-        Cursor.lockState = CursorLockMode.Locked;
-
         m_cc = GetComponent<CharacterController>();
         if ( m_cc == null ) {
             Debug.Log("No Character Controller Attached");
@@ -38,7 +35,9 @@ public class PlayerMovement : MonoBehaviour
 
         m_turn.x += mousePos.x;
         m_turn.y += mousePos.y;
-        transform.rotation = Quaternion.Euler(-m_turn.y, m_turn.x, 0);
+        if ( !LockRotation() ) {
+            transform.rotation = Quaternion.Euler(-m_turn.y, m_turn.x, 0);
+        }
 
         Vector3 move = transform.right * input.x + transform.forward * input.y;
         move.y = 0.0f;  // Move.y != input.y
@@ -50,5 +49,11 @@ public class PlayerMovement : MonoBehaviour
         // Combine horizontal and vertical movement
         Vector3 finalMove = (move * 5.0f) + (playerVelocity.y * Vector3.up);
         m_cc.Move(finalMove * Time.deltaTime);
+    }
+
+    //================================================================================================================================
+    //================================================================================================================================
+    private bool LockRotation() {
+        return GetComponent<PhoneManager>().GetRotationLock();
     }
 }
