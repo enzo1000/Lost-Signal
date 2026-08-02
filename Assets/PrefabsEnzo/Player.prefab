@@ -331,6 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   m_moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_lookAction: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_sensitivity: 0.2
 --- !u!114 &7209360298141763935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +568,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -804,7 +805,9 @@ PrefabInstance:
       value: allumette
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 1ff21ec97c3fee447b39f6f163a9afde, type: 3}
+    - {fileID: -8700617353114198275, guid: 1ff21ec97c3fee447b39f6f163a9afde, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ff21ec97c3fee447b39f6f163a9afde, type: 3}
