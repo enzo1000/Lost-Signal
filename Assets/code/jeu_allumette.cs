@@ -62,24 +62,24 @@ void IlAApuiyercecon()
 
     GameObject Phone = TelephoneCowboy();
     GameObject holder = Holdermyboy();
-    Phone.SetActive(false);
+    //Phone.SetActive(false);
 
-    GameObject boite_alu = Instantiate(Item_hold);
-    boite_alu.transform.parent = holder.transform;
-    boite_alu.transform.localPosition = Vector3.zero;
+    //GameObject boite_alu = Instantiate(Item_hold);
+    //boite_alu.transform.parent = holder.transform;
+    //boite_alu.transform.localPosition = Vector3.zero;
 
-    instanceobjet = Instantiate(Allumette);
-    instanceobjet.transform.parent = holder_alu.transform;
-    instanceobjet.transform.localPosition = Vector3.zero;
+    //instanceobjet = Instantiate(Allumette);
+    //instanceobjet.transform.parent = holder_alu.transform;
+    //instanceobjet.transform.localPosition = Vector3.zero;
     
-    holder_alu.GetComponent<MeshRenderer>().enabled = false;
+    //holder_alu.GetComponent<MeshRenderer>().enabled = false;
 
-    Debug.Log(instanceobjet.GetComponent<Rigidbody>());
+    //Debug.Log(instanceobjet.GetComponent<Rigidbody>());
 
-    instanceobjet.AddComponent<Suivi_souris>();
+    //instanceobjet.AddComponent<Suivi_souris>();
 
-    JOUE = true;
-    Debug.Log("JOUE = " + JOUE);
+    //JOUE = true;
+    //Debug.Log("JOUE = " + JOUE);
 
 
 
