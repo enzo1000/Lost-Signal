@@ -358,8 +358,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   m_dialogueBox: {fileID: 8770690827311036726}
   m_dialogue:
-  - {fileID: 11400000, guid: bbfb183f53b24d64780979f2602c772d, type: 2}
+  - {fileID: 11400000, guid: 53f023fdc4bf56f47a4585fc73ce6a6f, type: 2}
   - {fileID: 11400000, guid: cf6e3bd5941e8094c9663dca58c7266f, type: 2}
+  - {fileID: 11400000, guid: d4ad55f4b4949a14289f3a95da0d2a8c, type: 2}
+  - {fileID: 11400000, guid: ddad218f298cf814080ef4c5bdc0d83c, type: 2}
+  - {fileID: 11400000, guid: 5353425545261034cb61a7bf22a94c66, type: 2}
+  - {fileID: 11400000, guid: 8a072f9bf52e3c440bb7cd7dbf9cad3b, type: 2}
 --- !u!1 &1767689586570377775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,7 +1601,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349590b5cd8632e419fcf9eb3549536a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::jeu_allumette
-  Phone: {fileID: 0}
+  Item_hold: {fileID: 0}
+  holder_alu: {fileID: 0}
+  Allumette: {fileID: 0}
 --- !u!1 &7227827084677319269
 GameObject:
   m_ObjectHideFlags: 0

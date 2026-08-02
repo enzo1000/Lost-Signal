@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: DialoguePhaseOneGoalOne
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBox
   m_currentPhase: 0
-  m_showTime: 4
-  m_hideTime: 8
-  m_fullConnexionTexte: Try to find three points where the signas is the strongest.
-    This will allow us to triangulate your location
+  m_currentGoal: 0
+  m_showTime: 5
+  m_hideTime: 120000000
+  m_fullConnexionTexte: 'Us: I should try to get a better signal to give them my
+    location.'
   m_medConnexionTexte: 
   m_lowConnexionTexte: 
