@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     private ConnexionState m_connexionState = ConnexionState.Low;
+    private ConnexionState m_currentTexteConnexionState = ConnexionState.Low;
 
     //================================================================================================================================
     //================================================================================================================================
@@ -32,7 +33,8 @@ public class DialogueManager : MonoBehaviour
         if ( m_currentDialogue == null ) {  // If we don't have dialogues
             AssignNewDialog();              // new dialogue
         } else if ( m_gameFlowManager.GetCurrentPhase() != m_currentDialogue.m_currentPhase 
-            || m_gameFlowManager.GetCurrentGoal() != m_currentDialogue.m_currentGoal ) { // If the states of the game as changed
+            || m_gameFlowManager.GetCurrentGoal() != m_currentDialogue.m_currentGoal 
+            || m_connexionState != m_currentTexteConnexionState ) { // If the states of the game as changed
 
             AssignNewDialog();              // new dialogue
 
@@ -61,12 +63,15 @@ public class DialogueManager : MonoBehaviour
                 switch ( m_connexionState ) {
                     case ConnexionState.Low:
                         m_dialogueBox.GetComponentInChildren<TMP_Text>().text = db.m_lowConnexionTexte;
+                        m_currentTexteConnexionState = ConnexionState.Low;
                         break;
                     case ConnexionState.Med:
                         m_dialogueBox.GetComponentInChildren<TMP_Text>().text = db.m_medConnexionTexte;
+                        m_currentTexteConnexionState = ConnexionState.Med;
                         break;
                     case ConnexionState.Full:
                         m_dialogueBox.GetComponentInChildren<TMP_Text>().text = db.m_fullConnexionTexte;
+                        m_currentTexteConnexionState = ConnexionState.Full;
                         break;
                 }
             }

@@ -37,6 +37,8 @@ public class cal_distance : MonoBehaviour
     private void OnTriggerExit(Collider other) {
         if ( other.gameObject.tag == "Player" ) {
             m_isPlayerInRange = false;
+            m_playerPrefab.GetComponentInChildren<DialogueManager>().SetConnexionState(DialogueManager.ConnexionState.Low);
+            m_connexionGOLow.SetActive(true);
         }
     }
 
@@ -55,9 +57,6 @@ public class cal_distance : MonoBehaviour
                     m_connexionGOAll.SetActive(true);
                 }
             }
-        }else {
-            m_playerPrefab.GetComponentInChildren<DialogueManager>().SetConnexionState(DialogueManager.ConnexionState.Low);
-            m_connexionGOLow.SetActive(true);
         }
     }
 }
