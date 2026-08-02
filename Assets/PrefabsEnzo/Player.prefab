@@ -335,10 +335,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4436764233019920140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.76856166, y: 0.82400006}
-  m_AnchorMax: {x: 0.92743844, y: 0.97065175}
-  m_AnchoredPosition: {x: 46.230103, y: -161.79822}
-  m_SizeDelta: {x: 72.710205, y: 164.87234}
+  m_AnchorMin: {x: 0.8375145, y: 0.5863416}
+  m_AnchorMax: {x: 0.87700003, y: 0.6726584}
+  m_AnchoredPosition: {x: -0.2999878, y: -0.7982178}
+  m_SizeDelta: {x: 216.7102, y: 200.87234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &530821387821453659
 CanvasRenderer:
@@ -848,7 +848,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3782197102638362096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1582545439054932259}
+        m_TargetAssemblyTypeName: GoalManager, Assembly-CSharp
+        m_MethodName: SelectGoalTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4787891641090927350
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,10 +893,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4436764233019920140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.0951026, y: 0.82400006}
-  m_AnchorMax: {x: 0.25656167, y: 0.97065175}
-  m_AnchoredPosition: {x: 607.5863, y: -161.79822}
-  m_SizeDelta: {x: 70.899414, y: 164.87234}
+  m_AnchorMin: {x: 0.6798285, y: 0.5863416}
+  m_AnchorMax: {x: 0.71848553, y: 0.6726584}
+  m_AnchoredPosition: {x: 0.2000122, y: -1.1100006}
+  m_SizeDelta: {x: 218.89941, y: 200.87234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8828622873575443142
 CanvasRenderer:
@@ -1327,7 +1339,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3564736345880917347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1582545439054932259}
+        m_TargetAssemblyTypeName: GoalManager, Assembly-CSharp
+        m_MethodName: SelectGoalOne
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7667071699612672806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,7 +1636,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 49763089419285614, guid: d44660727d4f59940bbd6592d3c8171e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681503715678975872, guid: d44660727d4f59940bbd6592d3c8171e, type: 3}
       propertyPath: m_IsActive
@@ -1624,7 +1648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1876482228059525168, guid: d44660727d4f59940bbd6592d3c8171e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4499011473291514035, guid: d44660727d4f59940bbd6592d3c8171e, type: 3}
       propertyPath: m_Pivot.x
@@ -1795,6 +1819,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8467782630088348272, guid: d44660727d4f59940bbd6592d3c8171e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4579427979891364716}
+    - targetCorrespondingSourceObject: {fileID: 1876482228059525168, guid: d44660727d4f59940bbd6592d3c8171e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1582545439054932259}
   m_SourcePrefab: {fileID: 100100000, guid: d44660727d4f59940bbd6592d3c8171e, type: 3}
 --- !u!1 &238116616665967569 stripped
 GameObject:
@@ -1806,6 +1833,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1876482228059525168, guid: d44660727d4f59940bbd6592d3c8171e, type: 3}
   m_PrefabInstance: {fileID: 287454710372048831}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1582545439054932259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871144686772506511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60622a2305d1a5148a204aaa2d1bb1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!224 &4436764233019920140 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4499011473291514035, guid: d44660727d4f59940bbd6592d3c8171e, type: 3}

@@ -901,6 +901,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 771483830922004840, guid: 68575029cff3d38438d9eefdc953058f, type: 3}
   m_PrefabInstance: {fileID: 85003249}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &133781709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 133781710}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &133781710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133781709}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.11, y: 5.19, z: -4.94528}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &142249949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7057565490615629182, guid: 1f5a3cf6761027249b8b1e8e44852ec2, type: 3}
@@ -920,7 +951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3347708123937989697, guid: 18fb106de3e57e0418f11af31279c26e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.0286
       objectReference: {fileID: 0}
     - target: {fileID: 3347708123937989697, guid: 18fb106de3e57e0418f11af31279c26e, type: 3}
       propertyPath: m_LocalScale.y
@@ -3939,9 +3970,10 @@ GameObject:
   m_Component:
   - component: {fileID: 662638870}
   - component: {fileID: 662638871}
+  - component: {fileID: 662638872}
   m_Layer: 0
   m_Name: Player Spawn
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3974,6 +4006,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawn
   player: {fileID: 6961975744603808976, guid: e048d79064e027f4b946160b230496e6, type: 3}
+--- !u!114 &662638872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662638869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2849938f940cee346bc152abb69fcb6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!4 &664597290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 771483830922004840, guid: 68575029cff3d38438d9eefdc953058f, type: 3}
@@ -11919,3 +11963,4 @@ SceneRoots:
   - {fileID: 1996730052}
   - {fileID: 488161680}
   - {fileID: 662638870}
+  - {fileID: 133781710}
