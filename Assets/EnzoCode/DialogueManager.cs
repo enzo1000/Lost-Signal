@@ -11,6 +11,14 @@ public class DialogueManager : MonoBehaviour
     private float               m_textTimer = 0;
     private DialogueBox         m_currentDialogue = null;
 
+    public enum ConnexionState {
+        Low,
+        Med,
+        Full
+    }
+
+    private ConnexionState m_connexionState = ConnexionState.Low;
+
     //================================================================================================================================
     //================================================================================================================================
     private void Start() {
@@ -50,8 +58,22 @@ public class DialogueManager : MonoBehaviour
             if ( db.m_currentPhase == m_gameFlowManager.GetCurrentPhase() && db.m_currentGoal == m_gameFlowManager.GetCurrentGoal() ) {
                 m_dialogueBox.SetActive(true);
                 m_currentDialogue = db;
-                m_dialogueBox.GetComponentInChildren<TMP_Text>().text = db.m_fullConnexionTexte; // Add connexion based dialogue
+                switch ( m_connexionState ) {
+                    case ConnexionState.Low:
+                        m_dialogueBox.GetComponentInChildren<TMP_Text>().text = db.m_lowConnexionTexte;
+                        break;
+                    case ConnexionState.Med:
+                        m_dialogueBox.GetComponentInChildren<TMP_Text>().text = db.m_medConnexionTexte;
+                        break;
+                    case ConnexionState.Full:
+                        m_dialogueBox.GetComponentInChildren<TMP_Text>().text = db.m_fullConnexionTexte;
+                        break;
+                }
             }
         }
+    }
+
+    public void SetConnexionState(ConnexionState _other) {
+        m_connexionState = _other;
     }
 }
