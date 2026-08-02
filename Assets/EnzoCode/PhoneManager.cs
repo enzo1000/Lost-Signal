@@ -33,6 +33,7 @@ public class PhoneManager : MonoBehaviour
         }
 
         if ( m_phoneUI.activeSelf ) {
+            GetComponentInChildren<UIPhoneManager>().OpenTelephone();
             Cursor.lockState = CursorLockMode.Confined;
             m_rotationLock = true;
         } else {
