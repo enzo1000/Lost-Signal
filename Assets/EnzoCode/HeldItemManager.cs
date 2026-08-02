@@ -20,4 +20,10 @@ public class HeldItemManager : MonoBehaviour
     {
         return m_instantiatedGameObject;
     }
+    public GameObject GetHolderCowboy()
+    {
+        return m_holder;
+    }
 }
+
+
