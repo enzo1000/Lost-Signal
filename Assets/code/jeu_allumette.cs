@@ -71,10 +71,17 @@ void IlAApuiyercecon()
     instanceobjet = Instantiate(Allumette);
     instanceobjet.transform.parent = holder_alu.transform;
     instanceobjet.transform.localPosition = Vector3.zero;
+    
     holder_alu.GetComponent<MeshRenderer>().enabled = false;
+
+    Debug.Log(instanceobjet.GetComponent<Rigidbody>());
+
+    instanceobjet.AddComponent<Suivi_souris>();
 
     JOUE = true;
     Debug.Log("JOUE = " + JOUE);
+
+
 
 }
 }
