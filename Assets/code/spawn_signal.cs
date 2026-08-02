@@ -39,7 +39,6 @@ public class spawn_signal : MonoBehaviour
 
     void GetOut(int valeur_tableau)
     {
-        mesh = m_gameObjectList[valeur_tableau].GetComponent<MeshRenderer>();
-        mesh.enabled = false;
+        m_gameObjectList[valeur_tableau].gameObject.SetActive(false);
     }
 }

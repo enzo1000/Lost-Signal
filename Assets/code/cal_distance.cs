@@ -4,21 +4,43 @@ using UnityEngine;
 
 public class cal_distance : MonoBehaviour
 {
-    public Transform cube1;
-    public Transform cube2;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        Debug.Log("Bonjour je suis un cube :-)");
-        float distance = Vector3.Distance(cube1.localPosition,cube2.localPosition);
-        Debug.Log("cube 1 et cube 2 sont à " + distance + "de distance");
+    private GameObject m_playerPrefab;
+    private float m_distanceMidSignal;
+    private float m_distanceFullSignal;
+    private bool m_isPlayerInRange = false;
 
+    //================================================================================================================================
+    //================================================================================================================================
+    private void Start() {
+        m_distanceMidSignal = GetComponent<BoxCollider>().bounds.max.x / 2;
+        m_distanceFullSignal = GetComponent<BoxCollider>().bounds.max.x / 4;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    //================================================================================================================================
+    //================================================================================================================================
+    private void OnTriggerEnter(Collider other) {
+        if ( other.gameObject.tag == "Player" ) {
+            m_isPlayerInRange = true;
+            m_playerPrefab = other.gameObject;
+        }
+    }
+
+    //================================================================================================================================
+    //================================================================================================================================
+    private void OnTriggerExit(Collider other) {
+        if ( other.gameObject.tag == "Player" ) {
+            m_isPlayerInRange = false;
+            m_playerPrefab = null;
+        }
+    }
+
+    //================================================================================================================================
+    //================================================================================================================================
+    void Update() {
+        if ( m_isPlayerInRange ) {
+            float dist = Vector3.Distance(transform.position, m_playerPrefab.transform.position);
+            Debug.Log("Distance player : " + dist);
+        }
     }
 }
 
