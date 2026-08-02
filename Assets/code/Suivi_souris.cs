@@ -24,7 +24,6 @@ public class Suivi_souris : MonoBehaviour
             Debug.LogError("rigibody ehfgzgehiouegzhuoi");
         }
 
-
     }
 
     void Update()
@@ -35,12 +34,15 @@ public class Suivi_souris : MonoBehaviour
             
             Vector2 valeurDuLook = lookActionRecuperee.action.ReadValue<Vector2>();
 
-            Vector3 mouvement = new Vector3(0f, valeurDuLook.x, valeurDuLook.y);
+            Debug.Log(valeurDuLook.x + " " + valeurDuLook.y);
 
-            Debug.Log(mouvement.x + " " + mouvement.y);
+            Vector3 mouvement = new Vector3(valeurDuLook.x, 0f, valeurDuLook.y);
+
+            Debug.Log(mouvement.x + " " + mouvement.y + " " + mouvement.z);
 
             rb.MovePosition(rb.position + mouvement * sensibiliteAllumette * Time.fixedDeltaTime);
-            rb.MoveRotation(Quaternion.Euler(0f, 0f, 78f));
+            Debug.Log(rb.position);
+            //rb.MoveRotation(Quaternion.Euler(0f, 0f, 78f));
 
 
         }
