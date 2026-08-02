@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public InputActionReference m_moveAction;
     public InputActionReference m_lookAction;
 
+    public float m_sensitivity = 0.3f;
+
     private Vector2 m_turn;
     private Vector3 playerVelocity;
     private CharacterController m_cc = null;
@@ -33,10 +35,12 @@ public class PlayerMovement : MonoBehaviour
         Vector2 input = m_moveAction.action.ReadValue<Vector2>();
         Vector2 mousePos = m_lookAction.action.ReadValue<Vector2>();
 
+        mousePos *= m_sensitivity;
+
         m_turn.x += mousePos.x;
         m_turn.y += mousePos.y;
         if ( !LockRotation() ) {
-            float rotationLimitY = Mathf.Clamp(-m_turn.y, -30, 30);
+            float rotationLimitY = Mathf.Clamp(-m_turn.y, -45, 45);
             transform.rotation = Quaternion.Euler(rotationLimitY, m_turn.x, 0);
         }
 
@@ -48,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         playerVelocity.y += -9.81f * Time.deltaTime;
 
         // Combine horizontal and vertical movement
-        Vector3 finalMove = (move * 5.0f) + (playerVelocity.y * Vector3.up);
+        Vector3 finalMove = (move * 4.0f) + (playerVelocity.y * Vector3.up);
         m_cc.Move(finalMove * Time.deltaTime);
     }
 
