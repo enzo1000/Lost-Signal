@@ -15,7 +15,7 @@ public class PhoneManager : MonoBehaviour
     private void Start() {
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;
-        m_phoneUI.gameObject.SetActive(false);
+        m_phoneUI.SetActive(false);
     }
 
     //================================================================================================================================
