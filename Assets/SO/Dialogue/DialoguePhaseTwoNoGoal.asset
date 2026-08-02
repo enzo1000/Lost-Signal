@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28ac82582f4e5994982d8df2942af907, type: 3}
-  m_Name: DialoguePhaseOneNoGoal
+  m_Name: DialoguePhaseTwoNoGoal
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBox
-  m_currentPhase: 0
+  m_currentPhase: 1
   m_currentGoal: 3
   m_showTime: 5
-  m_hideTime: 10
-  m_fullConnexionTexte: 'Rescuer: Try to find three points where the signals is the
-    strongest. This will allow us to triangulate your location'
-  m_medConnexionTexte: 'Rescuer: Try to ... three points ... strongest ... will allow
-    ... location. '
-  m_lowConnexionTexte: 'Rescuer: Try ... three points ... location. '
+  m_hideTime: 8
+  m_fullConnexionTexte: 'Rescuer: The power outage may be caused by an external source.
+    Do not try to restore power. Start a fire and stay warm.'
+  m_medConnexionTexte: 'Rescuer: The power outage ... restore power ... stay warm.'
+  m_lowConnexionTexte: 'Rescuer: ... restore power ...'

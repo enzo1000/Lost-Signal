@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28ac82582f4e5994982d8df2942af907, type: 3}
-  m_Name: DialoguePhaseOneNoGoal
+  m_Name: DialoguePhaseThreeNoGoal
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBox
-  m_currentPhase: 0
+  m_currentPhase: 2
   m_currentGoal: 3
-  m_showTime: 5
-  m_hideTime: 10
-  m_fullConnexionTexte: 'Rescuer: Try to find three points where the signals is the
-    strongest. This will allow us to triangulate your location'
-  m_medConnexionTexte: 'Rescuer: Try to ... three points ... strongest ... will allow
-    ... location. '
-  m_lowConnexionTexte: 'Rescuer: Try ... three points ... location. '
+  m_showTime: 4
+  m_hideTime: 8
+  m_fullConnexionTexte: 'Rescuer: Do not go outside, and wrap up warmly. If possible,
+    use a mirror to create a beam of light and signal your location to us. We will
+    find you.'
+  m_medConnexionTexte: 'Rescuer: outside ... wrap up warmly ... use a mirror ...
+    find you. '
+  m_lowConnexionTexte: 'Rescuer: outside ... find you.'
