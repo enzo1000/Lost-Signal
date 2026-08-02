@@ -1,7 +1,5 @@
 using UnityEngine;
 
-
-
 public class cal_distance : MonoBehaviour
 {
     private GameObject m_playerPrefab;
@@ -12,8 +10,8 @@ public class cal_distance : MonoBehaviour
     //================================================================================================================================
     //================================================================================================================================
     private void Start() {
-        m_distanceMidSignal = GetComponent<BoxCollider>().bounds.max.x / 2;
-        m_distanceFullSignal = GetComponent<BoxCollider>().bounds.max.x / 4;
+        m_distanceMidSignal = Mathf.Abs(GetComponent<BoxCollider>().bounds.max.x / 2);
+        m_distanceFullSignal = Mathf.Abs(GetComponent<BoxCollider>().bounds.max.x / 4);
     }
 
     //================================================================================================================================
@@ -39,7 +37,6 @@ public class cal_distance : MonoBehaviour
     void Update() {
         if ( m_isPlayerInRange ) {
             float dist = Vector3.Distance(transform.position, m_playerPrefab.transform.position);
-            Debug.Log("Distance player : " + dist);
         }
     }
 }

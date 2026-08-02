@@ -6,6 +6,8 @@ public class UIPhoneManager : MonoBehaviour
     public GameObject m_mapMenuFrame;
     public GameObject m_smsMenuFrame;
 
+    public GameObject m_phoneSignal;
+
     //================================================================================================================================
     //================================================================================================================================
     public void OpenTelephone() {
