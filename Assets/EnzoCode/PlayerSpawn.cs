@@ -4,7 +4,7 @@ public class PlayerSpawn : MonoBehaviour
 {
     public GameObject player;
 
-    void Start() {
+    void Awake() {
         GameObject spawnedPlayer = Instantiate(player);
         spawnedPlayer.transform.localPosition = transform.localPosition;
     }
