@@ -15,4 +15,9 @@ public class HeldItemManager : MonoBehaviour
         m_instantiatedGameObject.transform.localPosition = Vector3.zero;    // Init current position
         m_holder.GetComponent<MeshRenderer>().enabled = false;              // Hide holder
     }
+
+    public GameObject GetPhoneCowboy()
+    {
+        return m_instantiatedGameObject;
+    }
 }

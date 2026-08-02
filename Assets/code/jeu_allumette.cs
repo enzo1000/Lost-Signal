@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class jeu_allumette : MonoBehaviour
 {
-    public GameObject Phone;
+    public GameObject Item_hold;
     private bool isPlayerInZone = false;
     private bool JOUE = false;
 
@@ -26,7 +26,6 @@ public class jeu_allumette : MonoBehaviour
         }
     }
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Update()
     {
@@ -41,13 +40,18 @@ public class jeu_allumette : MonoBehaviour
         return JOUE;
     }
 
+    private GameObject TelephoneCowboy()
+    {
+       return GetComponent<HeldItemManager>().GetPhoneCowboy();
+    }
+
     void IlAApuiyercecon()
     {
         Debug.Log("bravo ta appuie t trop fort bebou <3 MTN JOUE CHIEN");
-        Phone.gameObject.SetActive(false);
+        GameObject Phone = TelephoneCowboy();
+        Phone = Instantiate(Item_hold);
         JOUE = true;
         Debug.Log("JOUE = " + JOUE);
-
 
     }
 }
